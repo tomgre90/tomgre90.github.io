@@ -1,0 +1,97 @@
+body {
+    background: #22C1C3;
+    background: linear-gradient(0deg,rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    margin: 0;
+    padding: 0;
+    font: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    font-size : 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height:100vh;
+}
+
+.w3-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.btn{
+    background: #DAF7F7;
+    color: black;
+    border: white 1px solid;
+    border-radius: 8px;
+    padding: 6px 12px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    box-shadow: grey 0px 0px 5px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 6px;
+}
+
+/* Add this to make buttons appear next to each other */
+.w3-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    background-color: #83F7F7;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0px;
+    border: 2px solid #2d5757;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 20px;
+    background-color:#DAF7F7;
+    border-radius: 10px;
+    font: 12px Georgia, 'Times New Roman', Times, serif, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* when the input is focused, change the border color and background color */
+.form-container input[type="text"]:focus, .form-container
+input[type=input1]:focus {
+    border-color: #2d5757;
+    outline: none;
+    background-color: #DAF7F7;
+}
+
+.form-container .btnform {
+    background-color: #2d5757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.form-container .btnform:hover {
+    background-color: #83F7F7;
+    opacity:1;
+}
+
+

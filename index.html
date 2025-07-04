@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Healix</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+  <div class="w3-container">
+    <button id="startButton" class="btn" onclick="showForm()">
+      <span class="material-symbols-outlined">fitness_center</span>Push Up
+    </button>
+    <button id="graphic_push_ups" class="btn" onclick="showSettings()">
+      <span class="material-symbols-outlined">monitoring</span>View Progress
+    </button>
+  </div>
+  <div class="form-popup" id="settingsForm">
+    <form class="form-container" action ="https://sheetdb.io/api/v1/pbtdo1j0ccm7v" method="POST" id="sheetdb-form">
+      <h2>Push Up Challenge</h2>
+      <label for="date">Date</label>
+      <input type="date" id="date" name="data[date]" class="w3-input w3-border">
+      <label for="number_of_pushups">Number of Pushups</label>
+      <input type="number" id="number_of_pushups" name="data[number_of_pushups]" class="w3-input w3-border">
+      <label for="how_do_you_feel">How do you feel?</label>
+      <select id="how_do_you_feel" name="data[how_do_you_feel]" class="w3-input w3-border">
+        <option value="bad">Bad</option>
+        <option value="okay">Okay</option>
+        <option value="good">Good</option>
+        <option value="over_9000">Over 9000</option>
+      </select>
+      <button type="submit" value="Submit" class="btnform">Submit</button>
+      <button type="button" id="cancelButton" class="btnform" onclick = "closeForm()">Cancel</button>
+    </form>
+  </div>
+  <h2>Push Up Progress</h2>
+  <canvas id="push_up_chart" width="400" height="200"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
+
