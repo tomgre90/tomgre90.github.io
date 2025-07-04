@@ -35,8 +35,15 @@
       <button type="button" id="cancelButton" class="btnform" onclick = "closeForm()">Cancel</button>
     </form>
   </div>
-  <h2>Push Up Progress</h2>
-  <canvas id="push_up_chart" width="400" height="200"></canvas>
+  <div class="form-popup" id="progressPopup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+    <form class="form-container-progress" onsubmit="return false;">
+      <button type="button" class="close-btn" aria-label="Close chart" onclick="closeProgressPopup()">&times;</button>
+      <h2 id="popupTitle">Number of Pushups per Day</h2>
+      <div class="chart-wrapper">
+        <canvas id="push_up_chart"></canvas>
+      </div>
+    </form>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

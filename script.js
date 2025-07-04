@@ -59,6 +59,7 @@ fetch(apiUrl)
         },
         options: {
                 responsive: true,
+                maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false
@@ -92,3 +93,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const today = new Date().toISOString().split('T')[0]; // format: YYYY-MM-DD
 dateInput.value = today;
 });
+
+const closeProgressPopup = () => {
+    document.getElementById('progressPopup').style.display = 'none';
+};
+
+const showSettings = () => {
+    document.getElementById('progressPopup').style.display = 'block';
+};
